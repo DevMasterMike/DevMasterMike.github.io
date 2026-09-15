@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["D34W82FD5N.vexor.Miggler-TV"],
+        "components": [
+          { "/": "/watch/*", "comment": "Shared movies, shows and channels" }
+        ]
+      }
+    ]
+  }
+}
