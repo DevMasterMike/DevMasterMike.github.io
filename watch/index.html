@@ -97,13 +97,14 @@
       border-radius: 18px;
       display: grid;
       place-items: center;
-      background: linear-gradient(160deg, #4fb2ff 0%, #1a6dff 55%, #0a4ee0 100%);
+      overflow: hidden;
+      background: linear-gradient(135deg, #1E2A78 0%, #0A85FF 100%);
       box-shadow:
-        0 12px 30px rgba(20, 100, 255, 0.45),
+        0 12px 30px rgba(10, 60, 200, 0.45),
         inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
 
-    .app-mark svg { width: 34px; height: 34px; margin-left: 5px; display: block; }
+    .app-mark svg { width: 100%; height: 100%; display: block; }
 
     .brand-name {
       font-size: 15px;
@@ -235,7 +236,6 @@
     @media (min-width: 700px) {
       .card { padding: 44px 40px 32px; border-radius: 36px; }
       .app-mark { width: 88px; height: 88px; border-radius: 21px; }
-      .app-mark svg { width: 40px; height: 40px; }
     }
 
     [hidden] { display: none !important; }
@@ -245,8 +245,13 @@
   <main class="card">
     <div class="brand">
       <div class="app-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="#ffffff">
-          <path d="M7 4.9v14.2a1.6 1.6 0 0 0 2.4 1.38l12-7.1a1.6 1.6 0 0 0 0-2.76l-12-7.1A1.6 1.6 0 0 0 7 4.9z"/>
+        <svg viewBox="0 0 1024 1024">
+          <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="38">
+            <path d="M747.4 367.4 A225 225 0 0 1 747.4 656.6" stroke-opacity="0.4"/>
+            <path d="M816.3 309.5 A315 315 0 0 1 816.3 714.5" stroke-opacity="0.26"/>
+            <path d="M885.2 251.7 A405 405 0 0 1 885.2 772.3" stroke-opacity="0.14"/>
+          </g>
+          <path d="M318 318 L706 512 L318 706 Z" fill="#ffffff" stroke="#ffffff" stroke-width="96" stroke-linejoin="round"/>
         </svg>
       </div>
       <div class="brand-name">Modern IPTV</div>
