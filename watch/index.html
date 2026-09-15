@@ -308,11 +308,12 @@
       if (!/^\d{4}$/.test(year)) year = "";
 
       // Rebuild the app deep link from the same query items.
-      var appParams = new URLSearchParams();
-      if (type) appParams.set("type", type);
-      if (title) appParams.set("title", clean(query.get("title")));
-      if (title && year) appParams.set("year", year);
-      var appQuery = appParams.toString();
+      // encodeURIComponent writes spaces as %20; URLSearchParams would write "+", which the app reads literally.
+      var appParts = [];
+      if (type) appParts.push("type=" + encodeURIComponent(type));
+      if (title) appParts.push("title=" + encodeURIComponent(clean(query.get("title"))));
+      if (title && year) appParts.push("year=" + encodeURIComponent(year));
+      var appQuery = appParts.join("&");
       document.getElementById("open-app").href = "modern-iptv://watch" + (appQuery ? "?" + appQuery : "");
 
       if (title) {
