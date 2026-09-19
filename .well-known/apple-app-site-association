@@ -4,7 +4,8 @@
       {
         "appIDs": ["D34W82FD5N.vexor.Miggler-TV"],
         "components": [
-          { "/": "/watch/*", "comment": "Shared movies, shows and channels" }
+          { "/": "/watch/*", "comment": "Shared movies, shows and channels" },
+          { "/": "/pair/*", "comment": "The code an Apple TV shows, for the iPhone that signs it in" }
         ]
       }
     ]
